@@ -7,12 +7,13 @@ import time
 
 import cv2
 
-from medium_facenet_tutorial.align_dlib import AlignDlib
+#from medium_facenet_tutorial.align_dlib import AlignDlib
+from align_dlib import AlignDlib
 
 logger = logging.getLogger(__name__)
 
-align_dlib = AlignDlib(os.path.join(os.path.dirname(__file__), 'shape_predictor_68_face_landmarks.dat'))
-
+#align_dlib = AlignDlib(os.path.join(os.path.dirname(__file__), 'shape_predictor_68_face_landmarks.dat'))
+align_dlib = AlignDlib('shape_predictor_68_face_landmarks.dat')
 
 def main(input_dir, output_dir, crop_dim):
     start_time = time.time()
