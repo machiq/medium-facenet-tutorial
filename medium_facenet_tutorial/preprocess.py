@@ -27,7 +27,7 @@ def main(input_dir, output_dir, crop_dim):
         if not os.path.exists(image_output_dir):
             os.makedirs(image_output_dir)
 
-    image_paths = glob.glob(os.path.join(input_dir, '**/*.jpg'))
+    image_paths = glob.glob(os.path.join(input_dir, '**/*.png'))
     for index, image_path in enumerate(image_paths):
         image_output_dir = os.path.join(output_dir, os.path.basename(os.path.dirname(image_path)))
         output_path = os.path.join(image_output_dir, os.path.basename(image_path))
